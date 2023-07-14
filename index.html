@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Solve our brain teasers and puzzles to experience the best brain exercise.">
+    <meta name="keywords" content="magic square, magic square solver, magic square puzzles, magic sqaure 3x3, magic square 4x4, magic square 5x5,
+              magic square 6x6, magic square 7x7, magic square 8x8, magic square 9x9, magic square 10x10, play board games online, magic square cube">
+    <meta name="author" content="Sukhbir Kaur Chung" />
+    <meta name="date" content="Oct 03, 2022" />
+
+    <link rel="icon" href="Images/magicSquareSiteIcon.svg" type="image/svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSSReset.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Magic Square - Solve the magic square puzzle online</title>
+
+    <script src="index.js" defer></script>
+    <script>history.scrollRestoration = "manual"</script>
+</head>
+<body>
+    <main>
+        <section class="welcome">
+            <div class="welcomeDiv">
+                <h1>MAGIC SQUARE</h1>
+                <select name="selectedOption">
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                </select>
+            </div>
+            <img src="Images/backgroundImg.jpg" alt="Photo by Riho Kroll on Unsplash" />
+        </section>
+
+        <section class="playArea">
+            <details class="howToPlay">
+                <summary>How to Play?</summary>
+                <div class="howToPlayDetails">
+                    <p>
+                        A magic square of size nxn is an arrangement of numbers from 1 to n<sup>2</sup> such that the sum of the numbers in each row, column and diagonal is the same. Each cell in a nxn grid has a different number and the numbers range from 1 to n<sup>2</sup>. Sum required for each grid is shown on top of the grid.
+                        <pre>
+
+Example
+3x3
+3<sup>2</sup> is 9. Arrange the numbers 1 to 9 in a 3x3 grid such that:
+</pre>
+                    </p>
+                    <ul>
+                        <li>Each cell in a grid has a different number</li>
+                        <li>Sum of all the 3 rows is 15</li>
+                        <li>Sum of all the 3 columns is 15</li>
+                        <li>Sum of both the diagonals is 15</li>
+                    </ul>
+                    <img src="../Images/example.png" alt="Example of 3x3 grid" />
+                </div>
+            </details>
+
+            <table></table>
+
+            <button type="button" class="checkSolutionBtn">Check Solution</button>
+            <div class="dialog">
+                <div class="solution">
+                    <p></p>
+                    <button type="button" class="closeBtn">Close</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>
+            Copyright &copy; 2022-<span></span> Brain Teasers | Powered by <a href="https://paptido.com/">Paptido Inc.</a>
+        </p>
+    </footer>
+</body>
+</html>

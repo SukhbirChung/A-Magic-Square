@@ -1,0 +1,214 @@
+﻿:root {
+    --base-font-family: 'Abyssinica SIL', serif;
+    --base-font-size: 16px;
+    --primary-color: #9b9ea3;
+    --secondary-color: #62656a;
+    --letter-spacing: 1px;
+    --walkingManWrapperWidth: 50px;
+    --walkingManWrapperHeight: 80px;
+    --walkingManBorderColor: var(--secondary-color);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+    scroll-behavior: smooth;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 0.6rem;
+    line-height: 0;
+}
+
+/* main begins here */
+.welcome {
+    max-height: 525px;
+    position: relative;
+}
+
+    .welcome img {
+        /* img display is set to block because of the extra white space added to the bottom side of the image */
+        display: block;
+        width: 100%;
+        max-height: 525px;
+        object-fit: cover;
+    }
+
+.welcomeDiv {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    font-size: 1.7rem;    
+    animation: 0s forwards blackTextInDarkMode;
+}
+
+@keyframes blackTextInDarkMode {
+    from {
+        color: rgba(0, 0, 0, 0);
+        border-color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        color: rgba(0, 0, 0, 1);
+        border-color: rgba(0, 0, 0, 1);
+    }
+}
+
+.welcomeDiv select {
+    display: block;
+    margin: 10px auto 0;
+    padding: 5px;
+    border-radius: 3px;
+    letter-spacing: var(--letter-spacing);
+    background-color: transparent;
+    animation: 0s forwards blackTextInDarkMode;
+}
+
+    .welcomeDiv select:focus{
+        outline: none;
+    }
+
+    .welcomeDiv select:hover{
+        cursor: pointer;
+    }
+
+.playArea {
+    padding-block: 20px;
+    position: relative;
+}
+
+.howToPlay {
+    max-width: 500px;
+    margin: auto auto 20px;
+}
+
+.howToPlay summary {
+    width: max-content;
+    margin: auto auto 10px;
+    font-size: 1.2rem;
+}
+    .howToPlay summary:hover{
+        cursor: pointer;
+    }
+
+.howToPlayDetails {
+    border-radius: 5px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    text-align: justify;
+    line-height: 20px;
+    letter-spacing: var(--letter-spacing);
+}
+    .howToPlayDetails pre {
+        white-space: pre-wrap;
+        text-align: center;
+    }
+    .howToPlayDetails ul {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    .howToPlayDetails img {
+        display: block;
+        margin: auto;
+    }
+
+/* Table */
+/* Hide the spinners or arrows inside the input fields */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+table{
+    margin: auto auto 20px;
+}
+
+td{
+    border: 1px solid black;
+}
+
+input {
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Check Solution */
+button {
+    display: block;    
+}
+
+.checkSolutionBtn {
+    margin: auto auto 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 10px 0px var(--primary-color);
+}
+
+.dialog {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: end;
+}
+
+.solution {
+    height: max-content;    
+}
+
+button, .solution {
+    border: 3px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    font-size: 1.1rem;
+    letter-spacing: var(--letter-spacing);
+}
+
+.solution p{
+    max-width: 350px;
+    text-align: center;
+}
+
+.closeBtn {
+    margin: 20px 0 auto auto;
+}
+
+/* Footer */
+footer {
+    padding-block: 15px;
+    background-color: #141E30;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+footer a{
+    color: #ffc700;
+    text-decoration: none;
+}
+
+@media (min-width: 700px) {
+    nav{
+        justify-content: space-around;
+    }
+}
