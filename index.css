@@ -19,6 +19,13 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 sup {
     vertical-align: super;
     font-size: 0.6rem;
